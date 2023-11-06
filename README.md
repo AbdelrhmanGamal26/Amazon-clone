@@ -21,5 +21,3 @@ Key Features:
 This Amazon clone application serves as a showcase of modern web development practices, including the use of React.js for the frontend and firebase system for data storage and authentication.
 
 Note: This project is for educational and demonstration purposes only and is not affiliated with or endorsed by Amazon.
-
-Site URl: https://clone-db7ee.web.app
