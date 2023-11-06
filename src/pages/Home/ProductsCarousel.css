@@ -1,0 +1,225 @@
+.productsCarouselContainer {
+  position: relative;
+  z-index: 10;
+  width: 85vw;
+  height: auto;
+  margin: 20px auto;
+}
+
+.productsCarouselContainer .card {
+  padding: 10px;
+}
+
+.productsCarouselContainer .card .productLink {
+  text-decoration: none;
+  color: black;
+}
+
+.productsCarouselContainer .productsCardsCarousel .arrowContainer {
+  position: absolute;
+  top: 50%;
+  height: 100px;
+  opacity: 0;
+  transform: translateY(-50%);
+  -webkit-transform: translateY(-50%);
+  -moz-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  -o-transform: translateY(-50%);
+}
+
+.productsCarouselContainer .productsCardsCarousel .nextArrow {
+  right: 5px;
+}
+
+.productsCarouselContainer .productsCardsCarousel .prevArrow {
+  left: 7px;
+}
+
+.productsCarouselContainer .productsCardsCarousel:hover .arrowContainer {
+  background-color: white;
+  opacity: 1;
+  transition: background-color 0.5s, opacity 1s;
+  -webkit-transition: background-color 0.5s, opacity 1s;
+  -moz-transition: background-color 0.5s, opacity 1s;
+  -ms-transition: background-color 0.5s, opacity 1s;
+  -o-transition: background-color 0.5s, opacity 1s;
+  border-radius: 4px;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  -ms-border-radius: 4px;
+  -o-border-radius: 4px;
+}
+
+.productsCardsCarousel h2 {
+  margin-bottom: 10px;
+  font-size: 18px;
+  font-weight: bold;
+  text-transform: capitalize;
+}
+
+.productsCardsCarousel .productImage {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 320px;
+  height: 230px;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.productsCardsCarousel .productImage img {
+  object-fit: contain;
+  max-width: 100%;
+  max-height: 100%;
+}
+
+.productDetails {
+  margin: 10px 0 0;
+}
+
+.productDetails .productDeal .discountPercentage {
+  width: 50px;
+  height: 30px;
+  padding: 3px;
+  margin-right: 5px;
+  background-color: red;
+  color: white;
+  font-size: 14px;
+  font-weight: 400;
+  border-radius: 3px;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  -ms-border-radius: 3px;
+  -o-border-radius: 3px;
+}
+
+.productDetails .productDeal .deal {
+  color: red;
+  font-size: 14px;
+  font-weight: 400;
+}
+
+.productDetails .productPrice {
+  display: flex;
+  align-items: flex-start;
+  margin-top: 5px;
+}
+
+.productDetails .productPrice span:first-child {
+  font-size: 12px;
+}
+
+.productDetails .productPrice .priceAfterDiscount {
+  font-weight: 400;
+  margin-right: 5px;
+}
+
+.productDetails .productPrice .productDiscountText, 
+.productDetails .productPrice .priceBeforeDiscount {
+  margin-top: 2px;
+  font-size: 14px;
+  color: gray;
+}
+
+.productDetails .productPrice .priceBeforeDiscount {
+  margin-left: 2px;
+  text-decoration: line-through;
+}
+
+.productDetails .productDescription {
+  font-size: 14px;
+}
+
+.productsCardsCarousel a {
+  text-decoration: none;
+  color: #007185;
+  font-size: 14px;
+}
+
+.productsCardsCarousel a:hover {
+  color: rgb(191, 134, 20);
+  text-decoration: underline;
+}
+
+@media (min-width: 768px) and (max-width: 1199px) {
+  .productsCarouselContainer {
+    height: 270px;
+    margin-bottom: 40px;
+  }
+  .productsCarouselContainer .productsCardsCarousel .nextArrow {
+    right: 4px;
+  }
+  .productsCarouselContainer .productsCardsCarousel .prevArrow {
+    left: 6px;
+  }
+  .productsCarouselContainer .card {
+    padding: 5px;
+    height: auto;
+  }
+  .productsCardsCarousel h2 {
+    margin-top: 3px;
+    margin-bottom: 3px;
+    font-size: 14px;
+  }
+  .productsCardsCarousel .productImage {
+    width: 196px;
+    height: 170px;
+    margin-bottom: 15px;
+  }
+  .productDetails {
+    margin-top: 5px;
+  }
+  .productDetails .productDeal .discountPercentage,
+  .productDetails .productDeal .deal,
+  .productDetails .productPrice span:first-child,
+  .productDetails .productPrice .productDiscountText,
+  .productDetails .productPrice .priceBeforeDiscount,
+  .productsCardsCarousel a { 
+    font-size: 12px;
+  }
+  .productDetails .productDescription {
+    font-size: 11px;
+  }
+}
+
+@media (min-width: 375px) and (max-width: 767px) {
+  .productsCarouselContainer {
+    width: 95vw;
+  }
+  .productsCarouselContainer .carousel {
+    width: 95vw;
+  }
+  .productsCarouselContainer .card {
+    width: 160px;
+    height: auto;
+  }
+  .productsCardsCarousel h2 {
+    margin-top: 3px;
+    margin-bottom: 3px;
+    font-size: 10px;
+  }
+  .productsCarouselContainer .productsCardsCarousel .arrowContainer {
+    height: 60px;
+  }
+  .productsCarouselContainer .productsCardsCarousel .nextArrow {
+    right: 12px;
+  }
+  .productsCarouselContainer .productsCardsCarousel .prevArrow {
+    left: 11px;
+  }
+  .productsCardsCarousel .productImage {
+    width: 140px;
+    height: 120px;
+  }
+  .productDetails .productDeal .discountPercentage,
+  .productDetails .productDeal .deal,
+  .productDetails .productPrice span:first-child,
+  .productDetails .productPrice .productDiscountText,
+  .productDetails .productPrice .priceBeforeDiscount,
+  .productsCardsCarousel a { 
+    font-size: 10px;
+  }
+  .productDetails .productDescription {
+    font-size: 9px;
+  }
+}

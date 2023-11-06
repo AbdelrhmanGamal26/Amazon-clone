@@ -1,0 +1,103 @@
+.signUpPageOverlay {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width: 350px;
+  min-height: 250px;
+  padding: 25px;
+  margin-bottom: 25px;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  -webkit-border-radius: 6px;
+  -moz-border-radius: 6px;
+  -ms-border-radius: 6px;
+  -o-border-radius: 6px;
+}
+
+.signUpPageOverlay form {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  margin-bottom: 15px;
+}
+
+.signUpPageOverlay form div.formControl label {
+  display: block;
+  margin-bottom: 5px;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.signUpPageOverlay form div.formControl input {
+  margin-bottom: 5px;
+  padding: 5px;
+  height: 30px;
+  width: 100%;
+}
+
+.signUpPageOverlay form div.invalidForm input {
+  background-color: pink;
+  border: 1px solid red;
+  border-radius: 4px;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  -ms-border-radius: 4px;
+  -o-border-radius: 4px;
+}
+
+.signUpPageOverlay form input:focus::placeholder {
+  color: white;
+}
+
+.signUpPageOverlay form button {
+  border: none;
+  background-color: #F7CA00;
+  width: 100%;
+  height: 30px;
+  margin-top: 10px;
+  cursor: pointer;
+  border-radius: 6px;
+  -webkit-border-radius: 6px;
+  -moz-border-radius: 6px;
+  -ms-border-radius: 6px;
+  -o-border-radius: 6px;
+}
+
+.signUpPageOverlay form button:hover {
+  background-color: orange;
+}
+
+.termsOfUse {
+  font-size: 12px;
+  margin-bottom: 15px;
+}
+
+.termsOfUse span {
+  color: rgb(72, 72, 201);
+  cursor: pointer;
+}
+
+.termsOfUse span:hover {
+  color: orange;
+  text-decoration: underline;
+}
+
+.signUpPageOverlay h2 {
+  font-size: 25px;
+  font-weight: 500;
+  margin-bottom: 10px;
+}
+
+.signUpPageOverlay .signIn {
+  font-size: 14px;
+}
+
+.signUpPageOverlay .signIn a {
+  text-decoration: none;
+  color: rgb(72, 72, 201);
+}
+
+.signUpPageOverlay .signIn a:hover {
+  text-decoration: underline;
+  color: orange;
+}

@@ -1,0 +1,134 @@
+.productCarousel {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  -webkit-transform: translateX(-50%);
+  -moz-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+  -o-transform: translateX(-50%);
+}
+
+.productCarousel img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.nextArrowProduct, 
+.prevArrowProduct {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  cursor: pointer;
+  top: 28vh;
+  width: 60px;
+  background-color: transparent;
+  z-index: 5;
+  opacity: 0;
+  transition: opacity 0.5s;
+  -webkit-transition: opacity 0.5s;
+  -moz-transition: opacity 0.5s;
+  -ms-transition: opacity 0.5s;
+  -o-transition: opacity 0.5s;
+}
+
+.nextArrowProduct:hover, 
+.prevArrowProduct:hover {
+  opacity: 1;
+}
+
+.nextArrowProduct {
+  right: 25px;
+}
+
+.prevArrowProduct {
+  left: 0;
+}
+
+.arrowContainer {
+  width: 60px;
+  height: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: white;
+  border: none;
+  cursor: pointer;
+}
+
+.prevArrowProduct .arrowContainer , 
+.nextArrowProduct .arrowContainer {
+  border-radius: 6px;
+  -webkit-border-radius: 6px;
+  -moz-border-radius: 6px;
+  -ms-border-radius: 6px;
+  -o-border-radius: 6px;
+}
+
+.customDots {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  bottom: 10px;
+  width: 100%;
+  height: 50px;
+  left: 50%;
+  transform: translateX(-50%);
+  -webkit-transform: translateX(-50%);
+  -moz-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+  -o-transform: translateX(-50%);
+}
+
+.customDots li {
+  border: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 60px;
+  height: 45px;
+  margin: 5px;
+  cursor: pointer;
+  background-color: white;
+}
+
+.customDots li .productCarouselSmallImages {
+  width: 60px;
+  height: 45px;
+  border: none;
+  cursor: pointer;
+  object-fit: contain;
+  overflow: hidden;
+  position: relative;
+}
+
+.customDots li .productCarouselSmallImages::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 45px;
+  width: 60px;
+  background-color: rgba(255, 255, 255, 0.5);
+  z-index: 6;
+}
+
+.customDots li.slick-active .productCarouselSmallImages::before {
+  background-color: rgba(255, 255, 255, 0);
+}
+
+@media (min-width: 375px) and (max-width: 767px) {
+  .prevArrowProduct,
+  .nextArrowProduct,
+  .arrowContainer {
+    display: none;
+  }
+  .productCarousel .slick-track {
+    min-height: 20rem;
+  }
+}

@@ -1,0 +1,125 @@
+.signInPage {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100vh;
+  background-color: white;
+}
+
+.signInPage .logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 200px;
+  height: 60px;
+  margin-top: 15px;
+  margin-bottom: 10px;
+  overflow: hidden;
+}
+
+.signInPage .logo img {
+  width: 200px;
+  height: 150px;
+  object-fit: contain;
+}
+
+.separatingText {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 350px;
+  margin-bottom: 15px;
+  font-size: 14px;
+  color: gray;
+}
+
+.separatingText::before, 
+.separatingText::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  width: 115px;
+  height: 1px;
+  background-color: #ddd;
+}
+
+.separatingText::before {
+  left: 0;
+}
+
+.separatingText::after {
+  right: 0;
+}
+
+.signUpButton {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 350px;
+  height: 30px;
+  margin-bottom: 25px;
+  background-color: white;
+  box-shadow: 0 2px 5px gray;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  -webkit-border-radius: 6px;
+  -moz-border-radius: 6px;
+  -ms-border-radius: 6px;
+  -o-border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s ease-in-out;
+  -webkit-transition: background-color 0.3s ease-in-out;
+  -moz-transition: background-color 0.3s ease-in-out;
+  -ms-transition: background-color 0.3s ease-in-out;
+  -o-transition: background-color 0.3s ease-in-out;
+}
+
+.signUpButton:hover {
+  background-color: #eee;
+}
+
+.signUpButton {
+  padding: 5px;
+}
+
+.signUpButton a {
+  text-align: center;
+  text-decoration: none;
+  color: black;
+  font-size: 14px;
+  width: 100%;
+  height: 100%;
+}
+
+.signInFooter {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  padding-top: 20px;
+  border-top: 2px solid #ddd;
+}
+
+.signInFooter .signInPageFooterOptions {
+  display: flex;
+  justify-content: space-between;
+  width: 280px;
+  margin-bottom: 15px;
+  font-size: 14px;
+}
+
+.signInFooter .signInPageFooterOptions p {
+  color: rgb(72, 72, 201);
+  cursor: pointer;
+}
+
+.signInFooter .signInPageFooterOptions p:hover {
+  color: orange;
+  text-decoration: underline;
+}
+
+.signInFooter > p {
+  font-size: 14px;
+  color: gray;
+}

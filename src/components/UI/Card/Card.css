@@ -1,0 +1,27 @@
+.card {
+  width: 350px;
+  height: 380px;
+  background-color: white;
+  padding: 15px;
+  margin: 0 auto;
+  border-radius: 6px;
+  -webkit-border-radius: 6px;
+  -moz-border-radius: 6px;
+  -ms-border-radius: 6px;
+  -o-border-radius: 6px;
+}
+
+@media (min-width: 768px) and (max-width: 1199px) {
+  .card {
+    padding: 8px;
+    width: 206px;
+    height: 240px;
+  }
+}
+
+@media (min-width: 375px) and (max-width: 767px) {
+  .card {
+    width: 155px;
+    height: 180px;
+  }
+}

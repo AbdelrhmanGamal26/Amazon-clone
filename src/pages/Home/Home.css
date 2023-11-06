@@ -1,0 +1,76 @@
+.upperCategoriesSection .sectionTitle {
+  position: relative;
+  z-index: 11;
+  margin-top: -400px;
+}
+
+.upperCategoriesSection .sectionTitle, 
+.productsSection .sectionTitle, 
+.lowerCategoriesSection .sectionTitle {
+  margin-bottom: 20px;
+  padding: 20px;
+  width: 85vw;
+  height: 80px;
+  background-color: white;
+  border-radius: 6px;
+  -webkit-border-radius: 6px;
+  -moz-border-radius: 6px;
+  -ms-border-radius: 6px;
+  -o-border-radius: 6px;
+}
+
+.productsSection .sectionTitle {
+  display: flex;
+  align-items: center;
+  font-size: 2.125rem;
+  font-weight: bold;
+}
+
+.productsSection .sectionTitle a {
+  font-size: 16px;
+  font-weight: 400;
+  text-decoration: none;
+  color: #007185;
+  margin-left: 10px;
+  margin-top: 8px;
+}
+
+.productsSection .sectionTitle a:hover {
+  color: rgb(191, 134, 20);
+  text-decoration: underline;
+}
+
+@media (max-width: 1199px) {
+  .upperCategoriesSection .sectionTitle,
+  .productsSection .sectionTitle,
+  .lowerCategoriesSection .sectionTitle {
+    margin-bottom: 10px;
+    height: 50px;
+    padding: 13px;
+    font-size: 20px;
+  }
+  .productsSection .sectionTitle a {
+    font-size: 14px;
+    margin-bottom: 4px;
+  }
+}
+
+@media (max-width: 767px) {
+  .upperCategoriesSection .sectionTitle,
+  .productsSection .sectionTitle,
+  .lowerCategoriesSection .sectionTitle {
+    width: 90vw;
+    height: 35px;
+    padding: 10px;
+    margin-left: 1.4rem;
+    font-size: 14px;
+  }
+  .productsSection .sectionTitle {
+    justify-content: space-between;
+    margin-left: 1.2rem;
+  }
+  .productsSection .sectionTitle a {
+    font-size: 12px;
+    margin-bottom: 5px;
+  }
+}

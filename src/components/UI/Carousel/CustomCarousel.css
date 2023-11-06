@@ -1,0 +1,42 @@
+.carousel{
+  width: 85vw;
+  margin: 0 auto;
+}
+
+.arrowContainer {
+  position: absolute;
+  top: 0;
+  z-index: 5;
+  width: 60px;
+  height: 250px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+.nextArrow {
+  right: 0;
+}
+
+.prevArrow {
+  left: 0;
+}
+
+.arrowContainer:focus, 
+.arrowContainer:focus {
+  border: 2px solid #008296;
+  border-radius: 3px;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  -ms-border-radius: 3px;
+  -o-border-radius: 3px;
+}
+
+@media (max-width: 767px) {
+  .carousel {
+    width: 100vw;
+  }
+}

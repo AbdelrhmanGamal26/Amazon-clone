@@ -1,0 +1,195 @@
+.checkoutPage {
+  display: flex;
+  flex-direction: column;
+  min-height: 55vh;
+  background-color: white;
+}
+
+.checkoutPage .pageTitle {
+  margin-left: 40px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.checkoutContainer {
+  display: flex;
+}
+
+.checkoutForm {
+  margin-left: 20px;
+  background-color: #EAEDED;
+  margin-bottom: 50px;
+}
+
+.checkoutForm form {
+  display: flex;
+  flex-wrap: wrap;
+  width: 70vw;
+  padding: 20px;
+}
+
+.checkoutForm form .billingInfo label, 
+.checkoutForm form .paymentSection label {
+  display: block;
+  margin-bottom: 5px;
+  margin-left: 2px;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.checkoutForm form .billingInfo input , 
+.checkoutForm form .paymentSection input {
+  width: 100%;
+  height: 30px;
+  padding: 5px;
+  margin-bottom: 5px;
+}
+
+.checkoutForm form .invalidForm input {
+  background-color: pink;
+  border: 1px solid red;
+  border-radius: 4px;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  -ms-border-radius: 4px;
+  -o-border-radius: 4px;
+}
+
+.checkoutForm form input:focus::placeholder {
+  color: white;
+}
+
+.checkoutForm form .lowerInputFields {
+  display: flex;
+  flex-direction: column;
+  padding-right: 20px;
+  width: 50%;
+}
+
+.checkoutForm form .billingInfo, 
+.checkoutForm form .paymentSection {
+  display: flex;
+  padding: 20px;
+  flex-direction: column;
+  width: 50%;
+}
+
+.checkoutForm form button {
+  padding: 5px 10px;
+  margin-left: 20px;
+  background-color: #F7CA00;
+  border: none;
+  transition: background-color 0.3s;
+  -webkit-transition: background-color 0.3s;
+  -moz-transition: background-color 0.3s;
+  -ms-transition: background-color 0.3s;
+  -o-transition: background-color 0.3s;
+  border-radius: 4px;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  -ms-border-radius: 4px;
+  -o-border-radius: 4px;
+  cursor: pointer;
+}
+
+.checkoutForm form button:hover {
+  background-color: orange;
+}
+
+.checkoutPage .cartContent{
+  width: 250px;
+  height: fit-content;
+  padding: 15px;
+  margin-left: 20px;
+  background-color: #EAEDED;
+}
+
+@media (max-width: 768px) {
+  .checkoutPage .pageTitle {
+    margin-left: 25px;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    font-size: 20px;
+  }
+  .checkoutForm {
+    margin-left: 15px;
+    margin-bottom: 20px;
+  }
+  .checkoutForm form {
+    padding: 10px;
+    margin-bottom: 0;
+  }
+  .checkoutForm form .billingInfo h2, 
+  .checkoutForm form .paymentSection h2 {
+    font-size: 18px;
+  }
+  .checkoutForm form .billingInfo label, 
+  .checkoutForm form .paymentSection label {
+    font-size: 12px;
+  }
+  .checkoutForm form .billingInfo input , 
+  .checkoutForm form .paymentSection input {
+    width: 100%;
+    height: 28px;
+  }
+  .checkoutPage .cartContent{
+    width: auto;
+    margin-top: 0;
+    margin-right: 5px;
+    margin-left: 5px;
+    font-size: 12px;
+  }
+  .checkoutForm form button {
+    margin-bottom: 5px;
+  }
+}
+
+@media (min-width: 375px) and (max-width: 767px) {
+  .checkoutPage .pageTitle {
+    margin-left: 15px;
+    margin-top: 15px;
+    margin-bottom: 10px;
+    font-size: 16px;
+  }
+  .checkoutContainer {
+    flex-direction: column-reverse;
+  }
+  .checkoutForm {
+    margin: 30px 5px;
+  }
+  .checkoutForm form {
+    flex-direction: column;
+    padding: 0;
+    margin-bottom: 0;
+    width: 100%;
+  }
+  .checkoutForm form .billingInfo,
+  .checkoutForm form .paymentSection {
+    padding: 10px;
+  }
+  .checkoutForm form .billingInfo,
+  .checkoutForm form .paymentSection {
+    width: 100%;
+  }
+  .checkoutForm form .lowerInputFields{
+    padding-right: 0;
+  }
+  .checkoutForm form .billingInfo label,
+  .checkoutForm form .paymentSection label {
+    font-size: 11px;
+  }
+  .checkoutForm form .billingInfo h2, 
+  .checkoutForm form .paymentSection h2 {
+    font-size: 16px;
+  }
+  .checkoutPage .cartContent{
+    width: auto;
+    margin-top: 0;
+    margin-right: 3px;
+    margin-left: 3px;
+    font-size: 12px;
+  }
+  .checkoutForm form button {
+    margin-bottom: 10px;
+  }
+}

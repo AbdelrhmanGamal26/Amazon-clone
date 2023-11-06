@@ -1,0 +1,60 @@
+.location {
+  display: flex;
+  align-items: center;
+  height: 3rem;
+  padding: 5px;
+  margin: 5px;
+  color: white;
+  cursor: pointer;
+}
+
+.location:hover {
+  margin: 3px;
+  border: 2px solid white;
+  border-radius: 6px;
+  -webkit-border-radius: 6px;
+  -moz-border-radius: 6px;
+  -ms-border-radius: 6px;
+  -o-border-radius: 6px;
+}
+
+.location .icon {
+  padding-right: 5px;
+}
+
+.location .text p {
+  font-size: 12px;
+  font-weight: 300;
+}
+
+.location .text span {
+  font-size: 15px;
+  font-weight: bold;
+}
+
+@media (max-width: 767px) {
+  .location {
+    margin: 0;
+    margin-right: 3px;
+    padding: 0;
+    font-size: 10px;
+  }
+  .location:hover {
+    border: none
+  }
+  .location .icon {
+    padding-right: 3px;
+  }
+  .location .text p {
+    font-size: 8px;
+  }
+  .location .text span {
+    font-size: 10px;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1199px) {
+  .location {
+    margin-right: 0;
+  }
+}

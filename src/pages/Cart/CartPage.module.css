@@ -1,0 +1,12 @@
+.cartPage {
+  min-height: 55vh;
+  padding: 15px;
+  background-color: #EAEDED;
+}
+
+@media (min-width: 375px) and (max-width: 767px) {
+  .cartPage {
+    min-height: 30vh;
+    padding: 5px;
+  }
+}

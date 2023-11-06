@@ -1,0 +1,72 @@
+.navigationBar {
+  position: relative;
+}
+
+.navbar {
+  display: flex;
+  align-items: center;
+  height: 36px;
+  width: 100vw;
+  background-color: #232F3E;
+  padding: 0 1.2rem;
+}
+
+.navbar .navItems {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  color: white;
+}
+
+.navbar .navItems li:first-child {
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.navbar .navItems li {
+  padding: 8px 9px;
+  cursor: pointer;
+}
+
+.navbar .navItems li:not(:first-child) {
+  font-size: 14px;
+  font-weight: 400;
+  margin-top: 3px;
+}
+
+.navbar .navItems li:hover {
+  padding: 7px 8px;
+  border: 1px solid white;
+  border-radius: 3px;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  -ms-border-radius: 3px;
+  -o-border-radius: 3px;
+}
+
+@media (min-width: 768px) and (max-width: 1199px) {
+  .navbar .navItems {
+    gap: 0;
+  }
+}
+
+@media (max-width: 767px) {
+  .navbar {
+    padding: 0 10px;
+  }
+  .navbar .navItems li:first-child {
+    font-size: 10px;
+  }
+  .navbar .navItems li {
+    width: auto;
+    padding: 0;
+  }
+  .navbar .navItems li:not(:first-child) {
+    font-size: 10px;
+    margin-top: 0;
+  }
+  .navbar .navItems li:hover {
+    border: none;
+  }
+}

@@ -1,0 +1,53 @@
+.orders {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  flex-direction:column;
+  width: 75px;
+  padding: 5px;
+  height: 3rem;
+}
+
+.orders:hover {
+  padding: 3px;
+  border: 2px solid white;
+  border-radius: 4px;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  -ms-border-radius: 4px;
+  -o-border-radius: 4px;
+}
+
+.orders a {
+  width: 100%;
+  height: 100%;
+  text-decoration: none;
+  color: white;
+}
+
+.orders span {
+  font-size: 12px;
+  font-weight: 400;
+}
+
+.orders p {
+  font-size: 16px;
+  font-weight: 600;
+}
+
+@media (max-width: 767px) {
+  .orders {
+    padding: 3px 3px 3px 0;
+    width: 46px;
+    margin-top: 3px;
+  }
+  .orders span {
+    font-size: 8px;
+  }
+  .orders p {
+    font-size: 10px;
+  }
+  .orders:hover {
+    border: none;
+  }
+}

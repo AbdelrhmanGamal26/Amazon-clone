@@ -1,0 +1,28 @@
+.star-rating {
+  display: inline-block;
+}
+
+.star {
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+}
+
+.star-filled {
+  color: gold;
+}
+
+.star-half-filled {
+  color: gold;
+}
+
+.star-empty {
+  color: gray;
+}
+
+@media (min-width: 375px) and (max-width: 767px) {
+  .star {
+    width: 13px;
+    height: 13px;
+  }
+}

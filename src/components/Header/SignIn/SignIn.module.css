@@ -1,0 +1,52 @@
+.signInOptions {
+  position: relative;
+}
+
+.signIn {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  flex-direction: column;
+  padding: 5px;
+  width: 135px;
+  height: 3rem;
+}
+
+.signIn:hover {
+  padding: 3px;
+  border: 2px solid white;
+  border-radius: 4px;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  -ms-border-radius: 4px;
+  -o-border-radius: 4px;
+}
+
+.signIn span {
+  font-size: 12px;
+}
+
+.signIn .options {
+  display: flex;
+  align-items: center;
+  font-size: 16px;
+  font-weight: 600;
+}
+
+@media (max-width: 767px) {
+  .signIn {
+    width: 90px;
+    margin-left: 2px;
+    padding: 3px;
+  }
+  .signIn span {
+    font-size: 8px;
+  }
+  .signIn .options {
+    font-size: 10px;
+    font-weight: 600;
+  }
+  .signIn:hover {
+    border: none;
+  }
+}
