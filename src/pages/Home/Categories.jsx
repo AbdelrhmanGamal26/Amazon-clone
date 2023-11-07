@@ -23,14 +23,7 @@ export default function Categories({ data }) {
             <div className="categoryImage">
               <img src={category.image} alt="category" />
             </div>
-            <Link
-              to={{
-                pathname: `/products`,
-                search: `?category=${capitalHeader}`,
-              }}
-            >
-              See more
-            </Link>
+            <span>See more</span>
           </Link>
         </Card>
       );

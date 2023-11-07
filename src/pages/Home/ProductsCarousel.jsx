@@ -63,7 +63,7 @@ export default function Categories() {
                 : item.description}
             </p>
           </div>
-          <Link to={{ pathname: `/products/${item.id}` }}>Learn more</Link>
+          <span className="learnMore">Learn more</span>
         </Link>
       </Card>
     ));

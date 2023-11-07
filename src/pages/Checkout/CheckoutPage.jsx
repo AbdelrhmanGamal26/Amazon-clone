@@ -7,8 +7,9 @@ import masterCard from "../../media/masterCard.jpg";
 import useInput from "../../hooks/use-input";
 import { cartDataActions, userOrderDataActions } from "../../store/store";
 import useOrders from "../../hooks/use-orders";
-import classes from "./CheckoutPage.module.css";
 import withLoggedOut from "../../util/withLoggedOut";
+import withGuard from "../../util/withGuard";
+import classes from "./CheckoutPage.module.css";
 
 function CheckoutPage() {
   const navigate = useNavigate();
@@ -548,4 +549,4 @@ function CheckoutPage() {
   );
 }
 
-export default withLoggedOut(CheckoutPage);
+export default withLoggedOut(withGuard(CheckoutPage));

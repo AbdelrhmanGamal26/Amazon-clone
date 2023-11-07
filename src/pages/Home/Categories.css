@@ -34,13 +34,13 @@
   max-height: 100%;
 }
 
-.categoriesContainer a {
+.categoriesContainer span {
   text-decoration: none;
   color: #007185;
   font-size: 14px;
 }
 
-.categoriesContainer a:hover {
+.categoriesContainer span:hover {
   color: rgb(191, 134, 20);
   text-decoration: underline;
 }
@@ -78,7 +78,7 @@
     width: 143px;
     height: 130px;
   }
-  .categoriesContainer a {
+  .categoriesContainer span {
     font-size: 10px;
   }
 }

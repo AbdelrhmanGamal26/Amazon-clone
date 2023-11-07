@@ -1,8 +1,9 @@
 import { useNavigate } from "react-router";
 import { motion } from "framer-motion";
 
-import classes from "./ConfirmedOrder.module.css";
 import withLoggedOut from "../../util/withLoggedOut";
+import withGuard from "../../util/withGuard";
+import classes from "./ConfirmedOrder.module.css";
 
 function ConfirmedOrderPage() {
   const navigate = useNavigate();
@@ -31,4 +32,4 @@ function ConfirmedOrderPage() {
   );
 }
 
-export default withLoggedOut(ConfirmedOrderPage);
+export default withLoggedOut(withGuard(ConfirmedOrderPage));

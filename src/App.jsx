@@ -6,6 +6,7 @@ import { AnimatePresence } from "framer-motion";
 import RootLayout from "./pages/Root/Root";
 import AuthenticationLayout from "./pages/Root/AuthenticationLayout";
 import ErrorPage from "./pages/Error/ErrorPage";
+import Product from "./pages/Products/Product/Product";
 
 const HomePage = lazy(() => import("./pages/Home/Home"));
 const AuthenticationPage = lazy(() =>
@@ -13,7 +14,7 @@ const AuthenticationPage = lazy(() =>
 );
 const ProductsPage = lazy(() => import("./pages/Products/ProductsPage"));
 const CartPage = lazy(() => import("./pages/Cart/CartPage"));
-const Product = lazy(() => import("./pages/Products/Product/Product"));
+// const Product = lazy(() => import("./pages/Products/Product/Product"));
 const CheckoutPage = lazy(() => import("./pages/Checkout/CheckoutPage"));
 const ConfirmedOrderPage = lazy(() =>
   import("./pages/ConfirmedOrder/ConfirmedOrder")
@@ -46,9 +47,9 @@ export default function App() {
         {
           path: "products/:id",
           element: (
-            <Suspense>
-              <Product />
-            </Suspense>
+            // <Suspense>
+            <Product />
+            // </Suspense>
           ),
         },
         {

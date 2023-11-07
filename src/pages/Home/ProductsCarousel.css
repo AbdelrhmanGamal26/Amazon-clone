@@ -130,13 +130,13 @@
   font-size: 14px;
 }
 
-.productsCardsCarousel a {
+.productsCardsCarousel .learnMore {
   text-decoration: none;
   color: #007185;
   font-size: 14px;
 }
 
-.productsCardsCarousel a:hover {
+.productsCardsCarousel .learnMore:hover {
   color: rgb(191, 134, 20);
   text-decoration: underline;
 }
@@ -174,7 +174,7 @@
   .productDetails .productPrice span:first-child,
   .productDetails .productPrice .productDiscountText,
   .productDetails .productPrice .priceBeforeDiscount,
-  .productsCardsCarousel a { 
+  .productsCardsCarousel .learnMore { 
     font-size: 12px;
   }
   .productDetails .productDescription {
@@ -216,7 +216,7 @@
   .productDetails .productPrice span:first-child,
   .productDetails .productPrice .productDiscountText,
   .productDetails .productPrice .priceBeforeDiscount,
-  .productsCardsCarousel a { 
+  .productsCardsCarousel .learnMore { 
     font-size: 10px;
   }
   .productDetails .productDescription {

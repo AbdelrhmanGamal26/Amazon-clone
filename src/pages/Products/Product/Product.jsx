@@ -1,4 +1,3 @@
-import { lazy, Suspense } from "react";
 import { useQuery } from "@tanstack/react-query";
 import { useParams } from "react-router";
 import { useDispatch } from "react-redux";
@@ -9,11 +8,8 @@ import StarRating from "../../../components/UI/StarRating/StarRating";
 import LoadingSpinner from "../../../components/UI/LoadingSpinner/LoadingSpinner";
 import { cartDataActions } from "../../../store/store";
 import { priceAfterDiscount } from "../../../util/util";
+import ProductImageCustomCarousel from "./ProductImageCustomCarousel";
 import classes from "./Product.module.css";
-
-const ProductImageCustomCarousel = lazy(() =>
-  import("./ProductImageCustomCarousel")
-);
 
 export default function Product() {
   const params = useParams();
@@ -22,7 +18,7 @@ export default function Product() {
   const { data: product, isLoading } = useQuery({
     queryKey: ["product", params.id],
     queryFn: ({ signal }) => fetchProduct({ id: params.id, signal }),
-    staleTime: 30000,
+    staleTime: 10000,
   });
 
   const AddItemToCartHandler = () => {
@@ -58,18 +54,16 @@ export default function Product() {
     content = (
       <div className={classes.product}>
         <div className={classes.productImageCarousel}>
-          <Suspense>
-            <ProductImageCustomCarousel images={product.images}>
-              {product.images.map((image) => (
-                <div
-                  className={classes.productCarouselImageContainer}
-                  key={image}
-                >
-                  <img src={image} alt="product" />
-                </div>
-              ))}
-            </ProductImageCustomCarousel>
-          </Suspense>
+          <ProductImageCustomCarousel images={product.images}>
+            {product.images.map((image) => (
+              <div
+                className={classes.productCarouselImageContainer}
+                key={image}
+              >
+                <img src={image} alt="product" />
+              </div>
+            ))}
+          </ProductImageCustomCarousel>
         </div>
         <div className={classes.productDetailsContainer}>
           <h2 className={classes.productTitle}>{product.title}</h2>
@@ -145,7 +139,7 @@ export default function Product() {
       className={classes.productPage}
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
-      exit={{ opacity: 0, transition: { duration: 5 } }}
+      exit={{ opacity: 0 }}
     >
       {content}
     </motion.div>
