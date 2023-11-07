@@ -17,7 +17,7 @@ export default function Product() {
 
   const { data: product, isLoading } = useQuery({
     queryKey: ["product", params.id],
-    queryFn: ({ signal }) => fetchProduct({ id: params.id, signal }),
+    queryFn: ({ signal }) => fetchProduct({ signal, id: params.id }),
     staleTime: 10000,
   });
 

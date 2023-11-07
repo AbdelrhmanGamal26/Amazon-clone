@@ -12,6 +12,10 @@
   -o-transform: translateX(-50%);
 }
 
+.productCarousel .slick-list {
+  width: 100%;
+}
+
 .productCarousel img {
   width: 100%;
   height: 100%;
