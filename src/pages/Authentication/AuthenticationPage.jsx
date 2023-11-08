@@ -18,9 +18,9 @@ export default function AuthenticationPage() {
       animate={{ opacity: 1 }}
       exit={{ opacity: 0, transition: { duration: 5 } }}
     >
-      <div className={classes.logo}>
+      <Link to={"/"} className={classes.logo}>
         <img src={logo} alt="logo" />
-      </div>
+      </Link>
       {isSignIn && (
         <Fragment>
           <SignInPageOverlay />

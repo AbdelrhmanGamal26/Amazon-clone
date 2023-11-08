@@ -2,7 +2,7 @@ import { useNavigate } from "react-router";
 import { motion } from "framer-motion";
 
 import withLoggedOut from "../../util/withLoggedOut";
-import withGuard from "../../util/withGuard";
+import withGuardConfirm from "../../util/withGuardConfirm";
 import classes from "./ConfirmedOrder.module.css";
 
 function ConfirmedOrderPage() {
@@ -32,4 +32,4 @@ function ConfirmedOrderPage() {
   );
 }
 
-export default withLoggedOut(withGuard(ConfirmedOrderPage));
+export default withLoggedOut(withGuardConfirm(ConfirmedOrderPage));

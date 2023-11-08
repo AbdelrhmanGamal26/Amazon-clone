@@ -84,7 +84,9 @@ export default function OccupiedCart() {
         </p>
         <button className={classes.checkout}>
           <Link
-            to={userId ? "/checkout" : "/auth?mode=sign-in"}
+            to={{
+              pathname: userId ? "/checkout" : "/auth?mode=sign-in",
+            }}
             style={{
               textDecoration: "none",
               color: "black",

@@ -1,4 +1,4 @@
-import { useNavigate } from "react-router";
+import { useLocation, useNavigate } from "react-router";
 import { useDispatch, useSelector } from "react-redux";
 import { motion } from "framer-motion";
 
@@ -8,12 +8,12 @@ import useInput from "../../hooks/use-input";
 import { cartDataActions, userOrderDataActions } from "../../store/store";
 import useOrders from "../../hooks/use-orders";
 import withLoggedOut from "../../util/withLoggedOut";
-import withGuard from "../../util/withGuard";
+import withGuardCheckout from "../../util/withGuardCheckout";
 import classes from "./CheckoutPage.module.css";
 
 function CheckoutPage() {
   const navigate = useNavigate();
-
+  const location = useLocation();
   const { updateUserData } = useOrders();
 
   const dispatch = useDispatch();
@@ -220,7 +220,7 @@ function CheckoutPage() {
     resetExpirationYear();
     resetCVV();
 
-    navigate("/confirmedOrder");
+    navigate("/confirmedOrder", { state: { prevPath: location.pathname } });
   };
 
   const nameInputClasses = nameInputIsInvalid
@@ -549,4 +549,4 @@ function CheckoutPage() {
   );
 }
 
-export default withLoggedOut(withGuard(CheckoutPage));
+export default withLoggedOut(withGuardCheckout(CheckoutPage));
