@@ -48,7 +48,7 @@ export async function fetchProduct({ signal, id }) {
 
 export async function fetchOrders() {
   const response = await fetch(
-    `https://************************.firebaseio.com//orders.json`
+    `https://************************.firebaseio.com/orders.json`
   );
 
   if (!response.ok) {
