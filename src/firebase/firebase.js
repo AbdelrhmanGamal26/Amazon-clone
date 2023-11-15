@@ -10,7 +10,7 @@ import { getDatabase } from "firebase/database";
 const firebaseConfig = {
   apiKey: process.env.REACT_APP_FIREBASE_API_KEY,
   authDomain: "clone-db7ee.firebaseapp.com",
-  databaseURL: "https://clone-db7ee-default-rtdb.firebaseio.com",
+  databaseURL: process.env.REACT_APP_FIREBASE_DATABASE_URL,
   projectId: "clone-db7ee",
   storageBucket: "clone-db7ee.appspot.com",
   messagingSenderId: "654967322131",
