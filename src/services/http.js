@@ -48,11 +48,7 @@ export async function fetchProduct({ signal, id }) {
 
 export async function fetchOrders() {
   const response = await fetch(
-<<<<<<< HEAD
     `https://clone-db7ee-default-rtdb.firebaseio.com/orders.json`
-=======
-    `https://************************.firebaseio.com/orders.json`
->>>>>>> b95e57812c72cc5992f769ed0e36af9bc59a57f1
   );
 
   if (!response.ok) {
