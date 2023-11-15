@@ -48,7 +48,7 @@ export async function fetchProduct({ signal, id }) {
 
 export async function fetchOrders() {
   const response = await fetch(
-    `https://clone-db7ee-default-rtdb.firebaseio.com/orders.json`
+    process.env.REACT_APP_FIREBASE_DATABASE_URL + "/orders.json"
   );
 
   if (!response.ok) {
