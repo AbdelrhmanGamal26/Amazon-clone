@@ -114,7 +114,7 @@
   margin-right: 5px;
 }
 
-.productDetails .productPrice .productDiscountText, 
+.productDetails .productPrice .productDiscountText,
 .productDetails .productPrice .priceBeforeDiscount {
   margin-top: 2px;
   font-size: 14px;
@@ -174,7 +174,7 @@
   .productDetails .productPrice span:first-child,
   .productDetails .productPrice .productDiscountText,
   .productDetails .productPrice .priceBeforeDiscount,
-  .productsCardsCarousel .learnMore { 
+  .productsCardsCarousel .learnMore {
     font-size: 12px;
   }
   .productDetails .productDescription {
@@ -216,7 +216,7 @@
   .productDetails .productPrice span:first-child,
   .productDetails .productPrice .productDiscountText,
   .productDetails .productPrice .priceBeforeDiscount,
-  .productsCardsCarousel .learnMore { 
+  .productsCardsCarousel .learnMore {
     font-size: 10px;
   }
   .productDetails .productDescription {

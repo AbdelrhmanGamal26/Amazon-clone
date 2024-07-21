@@ -38,7 +38,7 @@ export default function Categories() {
         <Link to={{ pathname: `/products/${item.id}` }} className="productLink">
           <h2>
             {item.title.length > 28
-              ? item.title.slice(0, 27) + "..."
+              ? item.title.slice(0, 20) + "..."
               : item.title}
           </h2>
           <div className="productImage">

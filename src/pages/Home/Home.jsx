@@ -37,18 +37,18 @@ export default function HomePage() {
       <HomeCarousel />
       <div className="upperCategoriesSection">
         <h1 className="sectionTitle">Explore our categories</h1>
-        {/* <Categories data={firstSection} /> */}
+        <Categories data={firstSection} />
       </div>
       <div className="productsSection">
         <div className="sectionTitle">
           <p>Explore our products</p>
           <Link to="/products">See more</Link>
         </div>
-        {/* <ProductsCarousel /> */}
+        <ProductsCarousel />
       </div>
       <div className="lowerCategoriesSection">
         <h1 className="sectionTitle">More categories to explore</h1>
-        {/* <Categories data={secondSection} /> */}
+        <Categories data={secondSection} />
       </div>
     </motion.div>
   );
