@@ -5,9 +5,9 @@
 .navbar {
   display: flex;
   align-items: center;
-  height: 36px;
+  height: 40px;
   width: 100vw;
-  background-color: #232F3E;
+  background-color: #232f3e;
   padding: 0 1.2rem;
 }
 
@@ -36,16 +36,14 @@
 }
 
 .navbar .navItems li:hover {
-  padding: 7px 8px;
-  border: 1px solid white;
+  outline: 1px solid white;
   border-radius: 3px;
-  -webkit-border-radius: 3px;
-  -moz-border-radius: 3px;
-  -ms-border-radius: 3px;
-  -o-border-radius: 3px;
 }
 
 @media (min-width: 768px) and (max-width: 1199px) {
+  .navbar {
+    height: 35px;
+  }
   .navbar .navItems {
     gap: 0;
   }
@@ -53,6 +51,7 @@
 
 @media (max-width: 767px) {
   .navbar {
+    height: 30px;
     padding: 0 10px;
   }
   .navbar .navItems li:first-child {

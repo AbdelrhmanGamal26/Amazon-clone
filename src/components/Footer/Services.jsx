@@ -1,4 +1,4 @@
-import classes from "./Services.module.css";
+import styles from "./Services.module.css";
 
 const ServicesList = [
   {
@@ -38,8 +38,8 @@ const ServicesList = [
 
 export default function Services() {
   return (
-    <div className={classes.servicesContainer}>
-      <div className={classes.servicesNavLinksContainer}>
+    <div className={styles.servicesContainer}>
+      <div className={styles.servicesNavLinksContainer}>
         {ServicesList.map((list) => (
           <div key={list.header}>
             <p>{list.header}</p>

@@ -4,7 +4,7 @@ import { useSelector } from "react-redux";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCartShopping } from "@fortawesome/free-solid-svg-icons";
 
-import classes from "./Cart.module.css";
+import styles from "./Cart.module.css";
 
 export default function Cart() {
   const [cartIsHighlighted, setCartIsHighlighted] = useState(false);
@@ -12,9 +12,7 @@ export default function Cart() {
     (state) => state.cartData.totalQuantity
   );
 
-  const cartClasses = `${classes.cart} ${
-    cartIsHighlighted ? classes.bump : ""
-  }`;
+  const cartClasses = `${styles.cart} ${cartIsHighlighted ? styles.bump : ""}`;
 
   useEffect(() => {
     if (cartItemsQuantity === 0) {
@@ -32,12 +30,12 @@ export default function Cart() {
   }, [cartItemsQuantity]);
 
   return (
-    <Link to={"/cart"} className={cartClasses}>
-      <div className={classes.cartIcon}>
-        <span className={classes.cartItems}>{cartItemsQuantity}</span>
+    <Link to="/cart" className={cartClasses}>
+      <div className={styles.cartIcon}>
+        <span className={styles.cartItems}>{cartItemsQuantity}</span>
         <FontAwesomeIcon icon={faCartShopping} />
       </div>
-      <span className={classes.cartText}>Cart</span>
+      <span className={styles.cartText}>Cart</span>
     </Link>
   );
 }

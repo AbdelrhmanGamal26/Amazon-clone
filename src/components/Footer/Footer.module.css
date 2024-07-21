@@ -1,7 +1,6 @@
 .footer {
-  min-height: 50vh;
   width: 100vw;
-  background-color: #232F3E;
+  background-color: #232f3e;
 }
 
 .footer .navTop {
@@ -29,9 +28,3 @@
   height: 100%;
   padding: 16px 0;
 }
-
-/* @media (max-width: 767px) {
-  .footer {
-    
-  }
-} */

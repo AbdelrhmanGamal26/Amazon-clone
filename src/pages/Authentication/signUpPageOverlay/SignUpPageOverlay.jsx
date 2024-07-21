@@ -12,7 +12,7 @@ import { createUserWithEmailAndPassword } from "firebase/auth";
 import useInput from "../../../hooks/use-input";
 import { auth } from "../../../firebase/firebase";
 import { userDataActions } from "../../../store/store";
-import classes from "./SignUpPageOverlay.module.css";
+import styles from "./SignUpPageOverlay.module.css";
 import withLoggedIn from "../../../util/withLoggedIn";
 
 function SignUpPageOverlay() {
@@ -128,20 +128,20 @@ function SignUpPageOverlay() {
   };
 
   const nameInputClasses = nameInputIsInvalid
-    ? `${classes.formControl} ${classes.invalidForm}`
-    : classes.formControl;
+    ? `${styles.formControl} ${styles.invalidForm}`
+    : styles.formControl;
   const emailInputClasses = emailInputIsInvalid
-    ? `${classes.formControl} ${classes.invalidForm}`
-    : classes.formControl;
+    ? `${styles.formControl} ${styles.invalidForm}`
+    : styles.formControl;
   const passwordInputClasses = passwordInputIsInvalid
-    ? `${classes.formControl} ${classes.invalidForm}`
-    : classes.formControl;
+    ? `${styles.formControl} ${styles.invalidForm}`
+    : styles.formControl;
   const reEnteredPasswordInputClasses = reEnteredPasswordInputIsInvalid
-    ? `${classes.formControl} ${classes.invalidForm}`
-    : classes.formControl;
+    ? `${styles.formControl} ${styles.invalidForm}`
+    : styles.formControl;
 
   return (
-    <div className={classes.signUpPageOverlay}>
+    <div className={styles.signUpPageOverlay}>
       <h2>Create account</h2>
       {emailInUse && (
         <p style={{ color: "red", marginBottom: "2px" }}>
@@ -218,7 +218,7 @@ function SignUpPageOverlay() {
         </div>
         <button type="submit">Continue</button>
       </form>
-      <p className={classes.termsOfUse}>
+      <p className={styles.termsOfUse}>
         By continuing, you agree to Amazon's{" "}
         <span>
           Conditions of <br />
@@ -226,7 +226,7 @@ function SignUpPageOverlay() {
         </span>{" "}
         and <span>Privacy Notice</span>.
       </p>
-      <p className={classes.signIn}>
+      <p className={styles.signIn}>
         Already have an account?{" "}
         <Link to={{ search: `?mode=${isSignUp ? "sign-in" : "sign-up"}` }}>
           Sign in

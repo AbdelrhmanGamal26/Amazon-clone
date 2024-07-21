@@ -1,12 +1,11 @@
 import { Link } from "react-router-dom";
 import { useQuery } from "@tanstack/react-query";
 import { motion } from "framer-motion";
-
 import { fetchProductCategories } from "../../services/http";
-import HomeCarousel from "./HomeCarousel";
-import ProductsCarousel from "./ProductsCarousel";
-import Categories from "./Categories";
 import { categoryImagesArray } from "../../util/constants";
+import ProductsCarousel from "./ProductsCarousel";
+import HomeCarousel from "./HomeCarousel";
+import Categories from "./Categories";
 import "./Home.css";
 
 export default function HomePage() {
@@ -20,8 +19,8 @@ export default function HomePage() {
 
   if (categoriesData) {
     let categoryData = categoriesData.map((category) => ({
-      category,
-      image: categoryImagesArray[category],
+      category: category.name,
+      image: categoryImagesArray[category.slug],
     }));
 
     firstSection = categoryData.slice(0, 12);
@@ -38,18 +37,18 @@ export default function HomePage() {
       <HomeCarousel />
       <div className="upperCategoriesSection">
         <h1 className="sectionTitle">Explore our categories</h1>
-        <Categories data={firstSection} />
+        {/* <Categories data={firstSection} /> */}
       </div>
       <div className="productsSection">
         <div className="sectionTitle">
           <p>Explore our products</p>
-          <Link to={"/products"}>See more</Link>
+          <Link to="/products">See more</Link>
         </div>
-        <ProductsCarousel />
+        {/* <ProductsCarousel /> */}
       </div>
       <div className="lowerCategoriesSection">
         <h1 className="sectionTitle">More categories to explore</h1>
-        <Categories data={secondSection} />
+        {/* <Categories data={secondSection} /> */}
       </div>
     </motion.div>
   );

@@ -1,84 +1,64 @@
-.categoriesContainer {
-  position: relative;
-  z-index: 10;
-  width: 85vw;
-  margin: 0 auto 30px;
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(330px, 1fr));
-  gap: 20px 0;
-}
-
-.categoriesContainer .card .categoryLink {
-  text-decoration: none;
-  color: black;
-}
-
-.categoriesContainer h2 {
-  margin-bottom: 5px;
-  text-transform: capitalize;
-}
-
-.categoriesContainer .categoryImage {
+.carouselContainer .homeArrowContainer {
+  position: absolute;
+  top: 0;
+  z-index: 5;
+  width: 60px;
+  height: 75rem;
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 100%;
-  height: 300px;
-  overflow: hidden;
+  background-color: transparent;
+  border: none;
   cursor: pointer;
 }
 
-.categoriesContainer .categoryImage img {
-  object-fit: contain;
-  max-width: 100%;
-  max-height: 100%;
+.carouselContainer .homeArrowContainer:focus {
+  color: white;
+  transition: 0.3s;
+  box-shadow: 0 0 0 2px #008296;
 }
 
-.categoriesContainer span {
-  text-decoration: none;
-  color: #007185;
-  font-size: 14px;
+.homeCarouselImageContainer {
+  width: 85vw;
+  height: 75rem;
+  outline: none;
 }
 
-.categoriesContainer span:hover {
-  color: rgb(191, 134, 20);
-  text-decoration: underline;
+.homeCarouselImageContainer img {
+  width: 100%;
+  height: 50rem;
 }
 
 @media (min-width: 768px) and (max-width: 1199px) {
-  .categoriesContainer {
-    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-    gap: 10px;
-    margin: 0 auto 20px;
+  .carouselContainer .homeArrowContainer {
+    width: 40px;
+    height: 100px;
+    top: 125px;
   }
-  .categoriesContainer h2 {
-    font-size: 16px;
+  .carouselContainer .homeArrowContainer:focus {
+    box-shadow: 0 0 0 2px #008296;
   }
-  .categoriesContainer .categoryImage {
-    width: 190px;
-    height: 175px;
-    margin-bottom: 3px;
+  .homeCarouselImageContainer {
+    width: 85vw;
+    height: 47rem;
+  }
+  .homeCarouselImageContainer img {
+    height: 350px;
   }
 }
 
-@media (min-width: 375px) and (max-width: 767px) {
-  .categoriesContainer {
-    grid-template-columns: repeat(auto-fill, minmax(135px, 1fr));
-    gap: 20px;
-    padding-left: 0;
-    margin-left: 30px;
+@media (min-width: 560px) and (max-width: 767px),
+  (min-width: 360px) and (max-width: 559px) {
+  .carouselContainer .homeArrowContainer {
+    top: 0;
+    width: 40px;
+    height: 15rem;
   }
-  .categoriesContainer .card {
-    padding: 6px;
+  .homeCarouselImageContainer {
+    width: 100vw;
+    height: 42rem;
   }
-  .categoriesContainer h2 {
-    font-size: 14px;
-  }
-  .categoriesContainer .categoryImage {
-    width: 143px;
-    height: 130px;
-  }
-  .categoriesContainer span {
-    font-size: 10px;
+  .homeCarouselImageContainer img {
+    height: 15rem;
   }
 }

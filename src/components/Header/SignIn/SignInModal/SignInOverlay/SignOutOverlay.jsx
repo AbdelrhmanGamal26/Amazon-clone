@@ -1,11 +1,10 @@
 import { Link } from "react-router-dom";
 import { signOut } from "firebase/auth";
 import { useDispatch } from "react-redux";
-import { auth } from "../../../../../firebase/firebase";
 import { useNavigate } from "react-router-dom";
+import { auth } from "../../../../../firebase/firebase";
 import { userDataActions } from "../../../../../store/store";
-
-import classes from "./SignOutOverlay.module.css";
+import styles from "./SignOutOverlay.module.css";
 
 export default function SignOutOverlay() {
   const navigate = useNavigate();
@@ -25,21 +24,21 @@ export default function SignOutOverlay() {
   };
 
   return (
-    <div className={classes.signOutOverlay}>
-      <div className={classes.overlayUpperSection}>
-        <button className={classes.signOut} onClick={handleLogout}>
-          <Link to={"/"}>Sign out</Link>
+    <div className={styles.signOutOverlay}>
+      <div className={styles.overlayUpperSection}>
+        <button className={styles.signOut} onClick={handleLogout}>
+          <Link to="/">Sign out</Link>
         </button>
       </div>
-      <div className={classes.overlayLowerSection}>
-        <div className={classes.leftSection}>
+      <div className={styles.overlayLowerSection}>
+        <div className={styles.leftSection}>
           <h3>Your Lists</h3>
           <ul>
             <li>Create a list</li>
             <li>Find a list or registry</li>
           </ul>
         </div>
-        <div className={classes.rightSection}>
+        <div className={styles.rightSection}>
           <h3>Your Lists</h3>
           <ul>
             <li>Account</li>

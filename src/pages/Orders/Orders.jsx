@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 
 import { fetchOrders } from "../../services/http";
 import LoadingSpinner from "../../components/UI/LoadingSpinner/LoadingSpinner";
-import classes from "./Orders.module.css";
+import styles from "./Orders.module.css";
 import withLoggedOut from "../../util/withLoggedOut";
 
 function OrdersPage() {
@@ -38,14 +38,14 @@ function OrdersPage() {
       Object.values(orders)
         .flat(Infinity)
         .map((item) => (
-          <div key={item.id} className={classes.orderContainer}>
-            <div className={classes.itemImage}>
+          <div key={item.id} className={styles.orderContainer}>
+            <div className={styles.itemImage}>
               <img src={item.image} alt="itemImage" />
             </div>
-            <div className={classes.itemDetails}>
-              <h3 className={classes.itemName}>{item.name}</h3>
+            <div className={styles.itemDetails}>
+              <h3 className={styles.itemName}>{item.name}</h3>
               <span
-                className={classes.itemPrice}
+                className={styles.itemPrice}
                 style={{ display: "block", fontWeight: "bold" }}
               >
                 Price: <span style={{ fontWeight: "400" }}>${item.price}</span>
@@ -57,7 +57,7 @@ function OrdersPage() {
 
   return (
     <motion.div
-      className={classes.ordersPage}
+      className={styles.ordersPage}
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       exit={{ opacity: 0 }}

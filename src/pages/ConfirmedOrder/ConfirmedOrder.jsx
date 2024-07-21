@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 
 import withLoggedOut from "../../util/withLoggedOut";
 import withGuardConfirm from "../../util/withGuardConfirm";
-import classes from "./ConfirmedOrder.module.css";
+import styles from "./ConfirmedOrder.module.css";
 
 function ConfirmedOrderPage() {
   const navigate = useNavigate();
@@ -14,16 +14,16 @@ function ConfirmedOrderPage() {
 
   return (
     <motion.div
-      className={classes.confirmedOrderPage}
+      className={styles.confirmedOrderPage}
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       exit={{ opacity: 0 }}
     >
-      <div className={classes.confirmedOrderCard}>
+      <div className={styles.confirmedOrderCard}>
         <h2 style={{ textAlign: "center", fontSize: "28px" }}>
           Order Confirmed
         </h2>
-        <p className={classes.message} style={{ textAlign: "center" }}>
+        <p className={styles.message} style={{ textAlign: "center" }}>
           Thank you for your purchase and we wish you a great day!
         </p>
         <button onClick={confirmOrderHandler}>Continue Shopping</button>

@@ -1,11 +1,11 @@
 import { Link } from "react-router-dom";
-import classes from "./Orders.module.css";
+import styles from "./Orders.module.css";
 import { useSelector } from "react-redux";
 
 export default function Orders() {
   const { userId } = useSelector((state) => state.userData);
   return (
-    <div className={classes.orders}>
+    <div className={styles.orders}>
       <Link
         to={
           userId

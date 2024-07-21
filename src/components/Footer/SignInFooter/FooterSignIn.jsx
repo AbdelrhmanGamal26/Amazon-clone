@@ -1,13 +1,13 @@
 import { Link } from "react-router-dom";
 
-import classes from "./FooterSignIn.module.css";
+import styles from "./FooterSignIn.module.css";
 
 export default function FooterSignIn() {
   return (
-    <div className={classes.footerSignIn}>
-      <div className={classes.innerSection}>
+    <div className={styles.footerSignIn}>
+      <div className={styles.innerSection}>
         <p>See personalized recommendations</p>
-        <div className={classes.signIn}>
+        <div className={styles.signIn}>
           <Link to={{ pathname: "/auth", search: "?mode=sign-in" }}>
             Sign in
           </Link>
@@ -16,7 +16,7 @@ export default function FooterSignIn() {
           New customer?
           <Link
             to={{ pathname: "/auth", search: "?mode=sign-up" }}
-            className={classes.signUp}
+            className={styles.signUp}
           >
             Start here
           </Link>

@@ -4,7 +4,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCaretDown } from "@fortawesome/free-solid-svg-icons";
 
 import SignInModal from "./SignInModal/SignInModal";
-import classes from "./SignIn.module.css";
+import styles from "./SignIn.module.css";
 
 let timer;
 
@@ -25,14 +25,14 @@ export default function SignIn() {
     <div
       onMouseOver={showModalOverlayHandler}
       onMouseLeave={hideModalOverlayHandler}
-      className={classes.signInOptions}
+      className={styles.signInOptions}
     >
-      <div className={classes.signIn}>
+      <div className={styles.signIn}>
         <span>Hello, {!userName ? "sign in" : `${userName}`}</span>
-        <div className={classes.options}>
+        <div className={styles.options}>
           <p>Account & Lists</p>
           <FontAwesomeIcon
-            className={classes.arrow}
+            className={styles.arrow}
             icon={faCaretDown}
             style={{ color: "#c5c5c5", fontSize: "12px", marginLeft: "3px" }}
           />

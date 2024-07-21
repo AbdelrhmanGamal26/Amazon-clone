@@ -4,7 +4,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faSearch } from "@fortawesome/free-solid-svg-icons";
 
 import { stringTransform } from "../../../util/util";
-import classes from "./SearchBar.module.css";
+import styles from "./SearchBar.module.css";
 
 export default function SearchBar() {
   const [category, setCategory] = useState("");
@@ -25,15 +25,15 @@ export default function SearchBar() {
   };
 
   return (
-    <form className={classes.search} onSubmit={submitHandler}>
+    <form className={styles.search} onSubmit={submitHandler}>
       <input
         type="search"
-        className={classes.input}
+        className={styles.input}
         onChange={searchInputChangeHandler}
         value={category}
         placeholder="Enter Category Name"
       />
-      <button type="submit" className={classes.searchIcon}>
+      <button type="submit" className={styles.searchIcon}>
         <FontAwesomeIcon
           icon={faSearch}
           style={{ color: "#131921", fontSize: "15px" }}

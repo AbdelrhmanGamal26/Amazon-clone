@@ -12,7 +12,7 @@ import "./CustomCarousel.css";
 function NextArrow({ onClick }) {
   return (
     <button
-      className="arrowContainer nextArrow homeArrowContainer"
+      className="homeArrowContainer arrowContainer nextArrow"
       onClick={onClick}
     >
       <FontAwesomeIcon icon={faChevronRight} style={{ fontSize: "30px" }} />
@@ -23,7 +23,7 @@ function NextArrow({ onClick }) {
 function PrevArrow({ onClick }) {
   return (
     <button
-      className="arrowContainer prevArrow homeArrowContainer"
+      className="homeArrowContainer arrowContainer prevArrow"
       onClick={onClick}
     >
       <FontAwesomeIcon icon={faChevronLeft} style={{ fontSize: "30px" }} />

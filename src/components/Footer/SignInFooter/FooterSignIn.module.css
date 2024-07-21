@@ -33,7 +33,7 @@
   margin: 0 auto 5px;
   padding: 5px;
   font-size: 14px;
-  background-color: #FFC83E;
+  background-color: #ffc83e;
   border: 1px solid orange;
   border-radius: 3px;
   -webkit-border-radius: 3px;
@@ -41,6 +41,15 @@
   -ms-border-radius: 3px;
   -o-border-radius: 3px;
   cursor: pointer;
+}
+
+.footerSignIn .innerSection .signIn:hover {
+  background-color: #ddae36;
+  transition: 0.3s;
+  -webkit-transition: 0.3s;
+  -moz-transition: 0.3s;
+  -ms-transition: 0.3s;
+  -o-transition: 0.3s;
 }
 
 .footerSignIn .innerSection .signIn a {
@@ -65,4 +74,3 @@
   text-decoration: underline;
   color: rgb(191, 134, 20);
 }
-

@@ -1,4 +1,4 @@
-.carousel{
+.carousel {
   width: 85vw;
   margin: 0 auto;
 }
@@ -25,7 +25,7 @@
   left: 0;
 }
 
-.arrowContainer:focus, 
+.arrowContainer:focus,
 .arrowContainer:focus {
   border: 2px solid #008296;
   border-radius: 3px;

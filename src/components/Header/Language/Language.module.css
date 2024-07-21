@@ -2,13 +2,12 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  width: auto;
   height: 3rem;
   padding-left: 5px;
 }
 
 .lang:hover {
-  border: 2px solid white;
+  outline: 2px solid white;
   border-radius: 4px;
   -webkit-border-radius: 4px;
   -moz-border-radius: 4px;
@@ -26,6 +25,12 @@
   margin-right: 3px;
   font-size: 14px;
   font-weight: 500;
+}
+
+@media (min-width: 320px) and (max-width: 639px) {
+  .lang {
+    display: none;
+  }
 }
 
 @media (max-width: 767px) {

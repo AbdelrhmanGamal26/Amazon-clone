@@ -1,6 +1,6 @@
 import { Fragment } from "react";
 
-import classes from "./ProductsPage.module.css";
+import styles from "./ProductsPage.module.css";
 
 export default function ProductsPriceFilter({
   filterRange,
@@ -15,7 +15,7 @@ export default function ProductsPriceFilter({
   return (
     <Fragment>
       <h4 style={{ marginTop: "5px" }}>By Price:</h4>
-      <div className={classes.priceFilter}>
+      <div className={styles.priceFilter}>
         <form>
           <input
             type="number"

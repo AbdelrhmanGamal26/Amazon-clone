@@ -9,7 +9,7 @@ import { cartDataActions, userOrderDataActions } from "../../store/store";
 import useOrders from "../../hooks/use-orders";
 import withLoggedOut from "../../util/withLoggedOut";
 import withGuardCheckout from "../../util/withGuardCheckout";
-import classes from "./CheckoutPage.module.css";
+import styles from "./CheckoutPage.module.css";
 
 function CheckoutPage() {
   const navigate = useNavigate();
@@ -224,51 +224,51 @@ function CheckoutPage() {
   };
 
   const nameInputClasses = nameInputIsInvalid
-    ? `${classes.formControl} ${classes.invalidForm}`
-    : classes.formControl;
+    ? `${styles.formControl} ${styles.invalidForm}`
+    : styles.formControl;
   const emailInputClasses = emailInputIsInvalid
-    ? `${classes.formControl} ${classes.invalidForm}`
-    : classes.formControl;
+    ? `${styles.formControl} ${styles.invalidForm}`
+    : styles.formControl;
   const addressInputClasses = addressInputIsInvalid
-    ? `${classes.formControl} ${classes.invalidForm}`
-    : classes.formControl;
+    ? `${styles.formControl} ${styles.invalidForm}`
+    : styles.formControl;
   const cityInputClasses = cityInputIsInvalid
-    ? `${classes.formControl} ${classes.invalidForm}`
-    : classes.formControl;
+    ? `${styles.formControl} ${styles.invalidForm}`
+    : styles.formControl;
   const stateInputClasses = stateInputIsInvalid
-    ? `${classes.formControl} ${classes.invalidForm}`
-    : classes.formControl;
+    ? `${styles.formControl} ${styles.invalidForm}`
+    : styles.formControl;
   const zipCodeInputClasses = zipCodeInputIsInvalid
-    ? `${classes.formControl} ${classes.invalidForm}`
-    : classes.formControl;
+    ? `${styles.formControl} ${styles.invalidForm}`
+    : styles.formControl;
   const nameOnCardInputClasses = nameOnCardInputIsInvalid
-    ? `${classes.formControl} ${classes.invalidForm}`
-    : classes.formControl;
+    ? `${styles.formControl} ${styles.invalidForm}`
+    : styles.formControl;
   const creditCardNumberInputClasses = creditCardNumberInputIsInvalid
-    ? `${classes.formControl} ${classes.invalidForm}`
-    : classes.formControl;
+    ? `${styles.formControl} ${styles.invalidForm}`
+    : styles.formControl;
   const expirationMonthInputClasses = expirationMonthInputIsInvalid
-    ? `${classes.formControl} ${classes.invalidForm}`
-    : classes.formControl;
+    ? `${styles.formControl} ${styles.invalidForm}`
+    : styles.formControl;
   const expirationYearInputClasses = expirationYearInputIsInvalid
-    ? `${classes.formControl} ${classes.invalidForm}`
-    : classes.formControl;
+    ? `${styles.formControl} ${styles.invalidForm}`
+    : styles.formControl;
   const CVVInputClasses = CVVInputIsInvalid
-    ? `${classes.formControl} ${classes.invalidForm}`
-    : classes.formControl;
+    ? `${styles.formControl} ${styles.invalidForm}`
+    : styles.formControl;
 
   return (
     <motion.div
-      className={classes.checkoutPage}
+      className={styles.checkoutPage}
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       exit={{ opacity: 0 }}
     >
-      <h2 className={classes.pageTitle}>Checkout Form</h2>
-      <div className={classes.checkoutContainer}>
-        <div className={classes.checkoutForm}>
+      <h2 className={styles.pageTitle}>Checkout Form</h2>
+      <div className={styles.checkoutContainer}>
+        <div className={styles.checkoutForm}>
           <form onSubmit={submitHandler}>
-            <div className={classes.billingInfo}>
+            <div className={styles.billingInfo}>
               <h2 style={{ marginBottom: "10px" }}>Billing Address</h2>
               <div className={nameInputClasses}>
                 <label htmlFor="name">Your Name</label>
@@ -335,7 +335,7 @@ function CheckoutPage() {
                 )}
               </div>
               <div style={{ display: "flex", width: "100%" }}>
-                <div className={classes.lowerInputFields}>
+                <div className={styles.lowerInputFields}>
                   <div className={stateInputClasses}>
                     <label htmlFor="state">State</label>
                     <input
@@ -380,10 +380,10 @@ function CheckoutPage() {
                 </div>
               </div>
             </div>
-            <div className={classes.paymentSection}>
+            <div className={styles.paymentSection}>
               <h2 style={{ marginBottom: "10px" }}>Payment</h2>
               <label>Accepted cards</label>
-              <div className={classes.paymentMethods}>
+              <div className={styles.paymentMethods}>
                 <img src={visa} alt="visa" height="30px" width="45px" />
                 <img
                   src={masterCard}
@@ -441,7 +441,7 @@ function CheckoutPage() {
                 )}
               </div>
               <div style={{ display: "flex", width: "100%" }}>
-                <div className={classes.lowerInputFields}>
+                <div className={styles.lowerInputFields}>
                   <div className={expirationYearInputClasses}>
                     <label htmlFor="expYr">Expiration Year</label>
                     <input
@@ -500,7 +500,7 @@ function CheckoutPage() {
             </div>
           </form>
         </div>
-        <div className={classes.cartContent}>
+        <div className={styles.cartContent}>
           <div
             style={{
               display: "flex",
@@ -516,7 +516,7 @@ function CheckoutPage() {
           {cartItems.map((item) => (
             <div key={item.id}>
               <div
-                className={classes.item}
+                className={styles.item}
                 style={{
                   display: "flex",
                   justifyContent: "space-between",
@@ -531,7 +531,7 @@ function CheckoutPage() {
             </div>
           ))}
           <div
-            className={classes.total}
+            className={styles.total}
             style={{
               display: "flex",
               justifyContent: "space-between",

@@ -9,7 +9,7 @@ import { signInWithEmailAndPassword } from "firebase/auth";
 import { auth } from "../../../firebase/firebase";
 import { userDataActions } from "../../../store/store";
 
-import classes from "./SignInPageOverlay.module.css";
+import styles from "./SignInPageOverlay.module.css";
 import useInput from "../../../hooks/use-input";
 import withLoggedIn from "../../../util/withLoggedIn";
 
@@ -92,19 +92,19 @@ function SignInPageOverlay() {
   };
 
   const emailInputClasses = emailInputIsInvalid
-    ? `${classes.formControl} ${classes.invalidForm}`
-    : classes.formControl;
+    ? `${styles.formControl} ${styles.invalidForm}`
+    : styles.formControl;
   const passwordInputClasses = passwordInputIsInvalid
-    ? `${classes.formControl} ${classes.invalidForm}`
-    : classes.formControl;
+    ? `${styles.formControl} ${styles.invalidForm}`
+    : styles.formControl;
 
   return (
-    <div className={classes.signInPageOverlay}>
+    <div className={styles.signInPageOverlay}>
       <h2>Sign in</h2>
       {!validCredentials && (
         <p style={{ color: "red", marginBottom: "2px" }}>Invalid Credentials</p>
       )}
-      <form className={classes.signInForm} onSubmit={submitHandler}>
+      <form className={styles.signInForm} onSubmit={submitHandler}>
         <div className={emailInputClasses}>
           <label htmlFor="email">Your Email</label>
           <input
@@ -139,7 +139,7 @@ function SignInPageOverlay() {
         </div>
         <button type="submit">Continue</button>
       </form>
-      <p className={classes.termsOfUse}>
+      <p className={styles.termsOfUse}>
         By continuing, you agree to Amazon's{" "}
         <span>
           Conditions of <br />
@@ -147,7 +147,7 @@ function SignInPageOverlay() {
         </span>{" "}
         and <span>Privacy Notice</span>.
       </p>
-      <p className={classes.help} onClick={showOtherOptionsHandler}>
+      <p className={styles.help} onClick={showOtherOptionsHandler}>
         <FontAwesomeIcon
           icon={faCaretRight}
           style={{ marginRight: "5px", color: "gray" }}
@@ -155,7 +155,7 @@ function SignInPageOverlay() {
         Need help?
       </p>
       {isVisible && (
-        <div className={classes.otherOptions}>
+        <div className={styles.otherOptions}>
           <p>Forgot your password?</p>
           <p>Other issues with sign in</p>
         </div>

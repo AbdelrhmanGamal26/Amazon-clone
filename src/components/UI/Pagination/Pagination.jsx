@@ -4,7 +4,7 @@ import {
   faChevronLeft,
 } from "@fortawesome/free-solid-svg-icons";
 
-import classes from "./Pagination.module.css";
+import styles from "./Pagination.module.css";
 
 export default function Pagination({ total, pageNumber, onSetPageNumber }) {
   const changeNextPageHandler = () => {
@@ -20,11 +20,11 @@ export default function Pagination({ total, pageNumber, onSetPageNumber }) {
   const changePageHandler = (page) => onSetPageNumber(parseInt(page));
 
   return (
-    <div className={classes.pagination}>
+    <div className={styles.pagination}>
       <ul>
         <li>
           <button
-            className={classes.prev}
+            className={styles.prev}
             onClick={changePreviousPageHandler}
             style={{ color: pageNumber === 1 && "#CCC" }}
           >
@@ -38,7 +38,7 @@ export default function Pagination({ total, pageNumber, onSetPageNumber }) {
             <li key={page}>
               <button
                 onClick={() => changePageHandler(page)}
-                className={pageNumber === page ? classes.active : ""}
+                className={pageNumber === page ? styles.active : ""}
               >
                 {page}
               </button>
@@ -48,7 +48,7 @@ export default function Pagination({ total, pageNumber, onSetPageNumber }) {
         <li>
           <button
             onClick={changeNextPageHandler}
-            className={classes.next}
+            className={styles.next}
             style={{ color: pageNumber === 5 && "#CCC" }}
           >
             Next

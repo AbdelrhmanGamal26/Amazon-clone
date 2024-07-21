@@ -1,7 +1,7 @@
 import { Fragment } from "react";
 import StarRating from "../../components/UI/StarRating/StarRating";
 
-import classes from "./ProductsPage.module.css";
+import styles from "./ProductsPage.module.css";
 
 export default function ProductsRatingFilter({ onFetchRatingFilter }) {
   const ratingFilterHandler = (rating) => {
@@ -11,7 +11,7 @@ export default function ProductsRatingFilter({ onFetchRatingFilter }) {
   let content = [4, 3, 2, 1].map((element, index) => (
     <li key={index}>
       <button
-        className={classes.ratingButton}
+        className={styles.ratingButton}
         onClick={() => ratingFilterHandler(element)}
       >
         <StarRating

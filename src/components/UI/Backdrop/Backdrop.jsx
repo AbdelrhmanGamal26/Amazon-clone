@@ -1,6 +1,6 @@
 import { useEffect } from "react";
 
-import classes from "./Backdrop.module.css";
+import styles from "./Backdrop.module.css";
 
 export default function Backdrop({
   onMouseOver,
@@ -30,7 +30,7 @@ export default function Backdrop({
 
   return (
     <div
-      className={`${classes.backdrop} ${className}`}
+      className={`${styles.backdrop} ${className}`}
       onMouseOver={backdropMouseOverHandler}
       onClick={hideSideMenuHandler}
     />

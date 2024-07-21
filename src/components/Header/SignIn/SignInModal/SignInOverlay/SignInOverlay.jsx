@@ -1,11 +1,11 @@
 import { Link } from "react-router-dom";
-import classes from "./SignInOverlay.module.css";
+import styles from "./SignInOverlay.module.css";
 
 export default function SignInOverlay() {
   return (
-    <div className={classes.signInOverlay}>
-      <div className={classes.overlayUpperSection}>
-        <div className={classes.signIn}>
+    <div className={styles.signInOverlay}>
+      <div className={styles.overlayUpperSection}>
+        <div className={styles.signIn}>
           <Link to={{ pathname: "/auth", search: "?mode=sign-in" }}>
             Sign in
           </Link>

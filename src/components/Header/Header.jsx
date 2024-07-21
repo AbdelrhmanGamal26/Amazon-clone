@@ -8,17 +8,17 @@ import Orders from "./Orders/Orders";
 import Cart from "./Cart/Cart";
 import SignIn from "./SignIn/SignIn";
 
-import classes from "./Header.module.css";
+import styles from "./Header.module.css";
 
 export default function Header() {
   return (
-    <header className={classes.header} id="header">
-      <Link to={"/"} className={classes.image}>
+    <header className={styles.header} id="header">
+      <Link to="/" className={styles.logo}>
         <img src={amazonIcon} alt="Amazon" />
       </Link>
       <Location />
       <SearchBar />
-      <div className={classes.toolbar}>
+      <div className={styles.toolbar}>
         <Language />
         <SignIn />
         <Orders />

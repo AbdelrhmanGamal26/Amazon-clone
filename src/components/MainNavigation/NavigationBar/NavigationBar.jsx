@@ -1,7 +1,7 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faBars } from "@fortawesome/free-solid-svg-icons";
 
-import classes from "./NavigationBar.module.css";
+import styles from "./NavigationBar.module.css";
 import { useState } from "react";
 import SideMenuModal from "./SideMenu/SideMenuModal/SideMenuModal";
 import { AnimatePresence } from "framer-motion";
@@ -26,9 +26,9 @@ export default function NavigationBar() {
   };
 
   return (
-    <div className={classes.navigationBar}>
-      <nav className={classes.navbar}>
-        <ul className={classes.navItems}>
+    <div className={styles.navigationBar}>
+      <nav className={styles.navbar}>
+        <ul className={styles.navItems}>
           <li onClick={showSideMenuHandler}>
             <FontAwesomeIcon
               icon={faBars}
@@ -41,7 +41,7 @@ export default function NavigationBar() {
             All
           </li>
           {navItems.map((item) => (
-            <li key={item} className={classes.listItems}>
+            <li key={item} className={styles.listItems}>
               {item}
             </li>
           ))}

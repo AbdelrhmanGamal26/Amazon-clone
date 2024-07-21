@@ -2,9 +2,8 @@ import { Fragment } from "react";
 import { useQuery } from "@tanstack/react-query";
 import { useNavigate } from "react-router";
 
-import classes from "./ProductsPage.module.css";
+import styles from "./ProductsPage.module.css";
 import { fetchProductCategories } from "../../services/http";
-import { stringTransform } from "../../util/util";
 
 export default function ProductsCategoryFilter({
   onFetchSelectedCategories,
@@ -52,12 +51,12 @@ export default function ProductsCategoryFilter({
   let catContent;
 
   if (cats) {
-    catContent = cats.map((item) => {
-      let capitalHeader = stringTransform(item);
+    catContent = cats.map((cat) => {
+      let capitalHeader = cat.name;
       return (
         <button
           className={
-            selectedCategories.includes(capitalHeader) ? classes.active : ""
+            selectedCategories.includes(capitalHeader) ? styles.active : ""
           }
           key={capitalHeader}
           value={capitalHeader}
@@ -73,7 +72,7 @@ export default function ProductsCategoryFilter({
   return (
     <Fragment>
       <h4>By Category:</h4>
-      <div className={classes.catFilter}>
+      <div className={styles.catFilter}>
         {catContent}
         <button onClick={resetCategory} style={{ cursor: "pointer" }}>
           Clear

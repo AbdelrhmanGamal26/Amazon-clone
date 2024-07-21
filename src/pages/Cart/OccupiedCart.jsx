@@ -1,7 +1,7 @@
 import { useDispatch, useSelector } from "react-redux";
 import { Link } from "react-router-dom";
 
-import classes from "./OccupiedCart.module.css";
+import styles from "./OccupiedCart.module.css";
 import { cartDataActions } from "../../store/store";
 
 export default function OccupiedCart() {
@@ -27,12 +27,12 @@ export default function OccupiedCart() {
   };
 
   return (
-    <div className={classes.cartCard}>
-      <h2 className={classes.cartTitle}>Shopping Cart</h2>
+    <div className={styles.cartCard}>
+      <h2 className={styles.cartTitle}>Shopping Cart</h2>
       {cartItems.map((item) => (
-        <div className={classes.cartDetails} key={item.id}>
-          <div className={classes.cartItem}>
-            <div className={classes.itemImage}>
+        <div className={styles.cartDetails} key={item.id}>
+          <div className={styles.cartItem}>
+            <div className={styles.itemImage}>
               <img
                 src={item.image}
                 alt="itemImage"
@@ -40,16 +40,16 @@ export default function OccupiedCart() {
                 width="150px"
               />
             </div>
-            <div className={classes.itemDetails}>
-              <h3 className={classes.itemName}>{item.name}</h3>
+            <div className={styles.itemDetails}>
+              <h3 className={styles.itemName}>{item.name}</h3>
               <span
-                className={classes.itemPrice}
+                className={styles.itemPrice}
                 style={{ display: "block", fontWeight: "bold" }}
               >
                 Price: <span style={{ fontWeight: "400" }}>${item.price}</span>
               </span>
-              <div className={classes.itemActions}>
-                <div className={classes.modifyQuantity}>
+              <div className={styles.itemActions}>
+                <div className={styles.modifyQuantity}>
                   <button
                     onClick={() => decreaseCartItemQuantityHandler(item.id)}
                   >
@@ -78,11 +78,11 @@ export default function OccupiedCart() {
           </div>
         </div>
       ))}
-      <div className={classes.subtotal}>
+      <div className={styles.subtotal}>
         <p>
           Subtotal (1 item): <span>${subTotalPrice}</span>
         </p>
-        <button className={classes.checkout}>
+        <button className={styles.checkout}>
           <Link
             to={userId ? "/checkout" : "/auth?mode=sign-in"}
             style={{

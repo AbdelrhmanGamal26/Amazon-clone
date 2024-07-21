@@ -14,7 +14,7 @@ import { useState } from "react";
 
 import { stringTransform } from "../../../../util/util";
 import { fetchProductCategories } from "../../../../services/http";
-import classes from "./SideMenu.module.css";
+import styles from "./SideMenu.module.css";
 
 export default function SideMenu({ onClick }) {
   const { userName, userId } = useSelector((state) => state.userData);
@@ -48,7 +48,7 @@ export default function SideMenu({ onClick }) {
 
   if (data) {
     content = data.slice(0, sideMenuItems.value).map((item) => {
-      let capitalHeader = stringTransform(item);
+      let capitalHeader = stringTransform(item.name);
 
       return (
         <li key={capitalHeader}>
@@ -78,18 +78,18 @@ export default function SideMenu({ onClick }) {
       initial={{ left: "-370px" }}
       exit={{ left: "-370px" }}
       animate={{ left: "0" }}
-      className={classes.sideMenuContainer}
+      className={styles.sideMenuContainer}
     >
-      <div className={classes.icon} onClick={hideSideMenuHandler}>
+      <div className={styles.icon} onClick={hideSideMenuHandler}>
         <FontAwesomeIcon icon={faXmark} />
       </div>
-      <div className={classes.sideMenu}>
-        <div className={classes.signInSection}>
+      <div className={styles.sideMenu}>
+        <div className={styles.signInSection}>
           <FontAwesomeIcon icon={faCircleUser} />
           <p>Hello, {userName ? userName : "Sign in"}</p>
         </div>
-        <div className={classes.content}>
-          <div className={classes.firstSection}>
+        <div className={styles.content}>
+          <div className={styles.firstSection}>
             <h3>Shop by department</h3>
             <ul>
               {content}
@@ -105,7 +105,7 @@ export default function SideMenu({ onClick }) {
               </li>
             </ul>
           </div>
-          <div className={classes.secondSection}>
+          <div className={styles.secondSection}>
             <h3>Help & Settings</h3>
             <ul>
               <li>Your Account</li>

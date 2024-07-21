@@ -9,7 +9,7 @@ import LoadingSpinner from "../../../components/UI/LoadingSpinner/LoadingSpinner
 import { cartDataActions } from "../../../store/store";
 import { priceAfterDiscount } from "../../../util/util";
 import ProductImageCustomCarousel from "./ProductImageCustomCarousel";
-import classes from "./Product.module.css";
+import styles from "./Product.module.css";
 
 export default function Product() {
   const params = useParams();
@@ -52,46 +52,43 @@ export default function Product() {
 
   if (product) {
     content = (
-      <div className={classes.product}>
-        <div className={classes.productImageCarousel}>
+      <div className={styles.product}>
+        <div className={styles.productImageCarousel}>
           <ProductImageCustomCarousel images={product.images}>
             {product.images.map((image) => (
-              <div
-                className={classes.productCarouselImageContainer}
-                key={image}
-              >
+              <div className={styles.productCarouselImageContainer} key={image}>
                 <img src={image} alt="product" />
               </div>
             ))}
           </ProductImageCustomCarousel>
         </div>
-        <div className={classes.productDetailsContainer}>
-          <h2 className={classes.productTitle}>{product.title}</h2>
-          <div className={classes.rating}>
+        <div className={styles.productDetailsContainer}>
+          <h2 className={styles.productTitle}>{product.title}</h2>
+          <div className={styles.rating}>
             <span style={{ fontWeight: "500" }}>Rating: </span>
             <span style={{ fontSize: "14px" }}>{product.rating}</span>
             <StarRating rating={product.rating} />
           </div>
-          <div className={classes.productPrice}>
-            <div className={classes.productPriceAfterDiscount}>
+          <div className={styles.productPrice}>
+            <div className={styles.productPriceAfterDiscount}>
               <span
-                className={classes.discountPercentage}
+                className={styles.discountPercentage}
                 style={{ color: "red", marginRight: "10px" }}
               >
                 {`-${product.discountPercentage}%`}
               </span>
               <span
-                className={classes.dollarSign}
+                className={styles.dollarSign}
                 style={{ fontSize: "12px", marginTop: "2px" }}
               >
                 $
               </span>
-              <span className={classes.priceAfterDiscount}>
+              <span className={styles.priceAfterDiscount}>
                 {priceAfterDiscount(product.price, product.discountPercentage)}
               </span>
             </div>
             <div
-              className={classes.productPriceBeforeDiscount}
+              className={styles.productPriceBeforeDiscount}
               style={{ color: "gray", marginTop: "5px" }}
             >
               <span>List price: </span>
@@ -100,14 +97,14 @@ export default function Product() {
               >{`$${product.price}`}</span>
             </div>
           </div>
-          <div className={classes.brand} style={{ marginBottom: "15px" }}>
+          <div className={styles.brand} style={{ marginBottom: "15px" }}>
             <span style={{ fontWeight: "500" }}>Brand: </span>
             <p style={{ display: "inline-block", fontSize: "14px" }}>
               {product.brand}
             </p>
           </div>
           <div
-            className={classes.productDescription}
+            className={styles.productDescription}
             style={{ marginBottom: "15px" }}
           >
             <span
@@ -121,11 +118,8 @@ export default function Product() {
             </span>
             <p style={{ fontSize: "14px" }}>{product.description}</p>
           </div>
-          <div className={classes.actions}>
-            <button
-              className={classes.addToCart}
-              onClick={AddItemToCartHandler}
-            >
+          <div className={styles.actions}>
+            <button className={styles.addToCart} onClick={AddItemToCartHandler}>
               Add to cart
             </button>
           </div>
@@ -136,7 +130,7 @@ export default function Product() {
 
   return (
     <motion.div
-      className={classes.productPage}
+      className={styles.productPage}
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       exit={{ opacity: 0 }}

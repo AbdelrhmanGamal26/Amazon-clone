@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 
 import EmptyCart from "./EmptyCart";
 import OccupiedCart from "./OccupiedCart";
-import classes from "./CartPage.module.css";
+import styles from "./CartPage.module.css";
 
 export default function CartPage() {
   const cartItemsQuantity = useSelector(
@@ -12,7 +12,7 @@ export default function CartPage() {
 
   return (
     <motion.div
-      className={classes.cartPage}
+      className={styles.cartPage}
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       exit={{ opacity: 0 }}

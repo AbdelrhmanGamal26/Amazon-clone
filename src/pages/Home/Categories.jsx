@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import Card from "../../components/UI/Card/Card";
-import { stringTransform } from "../../util/util";
+import fallbackImage from "../../media/fallbackImage.jpg";
 import "./Categories.css";
 
 export default function Categories({ data }) {
@@ -8,7 +8,7 @@ export default function Categories({ data }) {
 
   if (data) {
     content = data.map((category) => {
-      let capitalHeader = stringTransform(category.category);
+      let capitalHeader = category.category;
 
       return (
         <Card key={category.category}>
@@ -21,7 +21,7 @@ export default function Categories({ data }) {
           >
             <h2>{capitalHeader}</h2>
             <div className="categoryImage">
-              <img src={category.image} alt="category" />
+              <img src={category.image ?? fallbackImage} alt="category" />
             </div>
             <span>See more</span>
           </Link>
